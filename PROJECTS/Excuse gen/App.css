@@ -1,0 +1,43 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.App{
+  border: 5px solid black;
+  border-radius: 20px;
+  height: 750px;
+  width: auto;
+  padding: 60px;
+  overflow: hidden;
+  background-color:cornflowerblue;
+}
+.buttons{
+  margin-left: 20px;
+  border-radius: 10px;
+  width: auto;
+  height: 50px;
+  background-color: bisque;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.buttons:hover{
+  background-color: rgb(43, 255, 255);
+}
+
+h1{
+  text-decoration: underline;
+}
+p{
+  font-size: 2em;
+}
+.pdiv{
+  border: 2px solid black;
+  border-radius: 40px;
+  padding: 30px;
+  background-color: bisque;
+}
+.pdiv:hover{
+  background-color: rgb(43, 255, 255);
+}
