@@ -1,0 +1,99 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+} 
+.navbar{
+  display: flex;
+  background-color: aqua;
+  justify-content: flex-end;
+  align-items: center;
+  height: 150px;
+  border-radius: 15px;
+}
+#username{
+  font-weight: bold;
+  margin-right: 10px;
+}
+#userimg{
+  border: 0.5px solid aqua;
+  border-radius: 50px;
+  margin-right: 20px;
+  margin-top: -10px;
+}
+.navigation{
+  margin-right: 20px;
+  cursor: pointer;
+}
+.navbtn{
+  font-display: none;
+  font-size: 1.5em;
+  margin-left: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#signoutbtn{
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.formbox{
+  margin-top: 60px;
+  padding-top: 40px;
+  border: 1px solid;
+  border-radius: 40px;
+  height: 300px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  background-color: aqua;
+}
+.inputbox{
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-top: 5px;
+  border:2px solid black;
+  color: rgba(8, 100, 100, 0.979);
+}
+
+.subbtn{
+  margin-top: 20px;
+  position: sticky;
+  width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  color: rgba(8, 100, 100, 0.979);
+  cursor: pointer;
+}
+.error{
+  color: red;
+}
+
+.contentbox{
+  background-color: aqua;
+  border: 2px solid;
+  border-radius: 40px;
+  margin-bottom:10px ;
+}
+.title{
+  text-decoration: underline;
+}
+.body{
+  border: 1px solid;
+  width: auto;
+  height: auto;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+.footer{
+  font-weight: bold;
+  
+}
+.name{
+}
