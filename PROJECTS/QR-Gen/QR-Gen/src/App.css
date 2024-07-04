@@ -1,0 +1,42 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.inputfield{
+  height: 40px;
+  width: 600px;
+  margin-bottom: 40px;
+  margin-left: 30px;
+  font-size: 2em;
+  padding-left: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.code{
+  text-align: center;
+  margin-top: 30px;
+  border: 2px solid black;
+  width: 500px;
+  height: 500px;
+  padding-top: 70px;
+  border-radius: 20px;
+  margin-left: 400px;
+  box-shadow: black 5px 5px 5px 5px;
+}
+body{
+  background-color: cornflowerblue;
+}
+
+.btn{
+  width: 100px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: aqua;
+}
+.btn:hover{
+  background-color: darkturquoise;
+}
