@@ -12,6 +12,9 @@ class GeminiViewModel : ViewModel() {
     private val _aiResponse = MutableLiveData<String>()
     val aiResponse: LiveData<String> = _aiResponse
 
+    private val _isloading = MutableLiveData<Boolean>(false)
+    val isloading: LiveData<Boolean> = _isloading
+
     val generativeAI: GenerativeModel = GenerativeModel(
         modelName = "gemini-pro",
         apiKey = "AIzaSyCHlbS7nR11PjJWgd_3i97lAOMKO-hPThg"
@@ -20,9 +23,11 @@ class GeminiViewModel : ViewModel() {
     fun sendMessage(result: String) {
         viewModelScope.launch {
             try {
+                _isloading.postValue(true)
                 val chat = generativeAI.startChat()
                 val response = chat.sendMessage(result+". Now make a paragraph describing the weather, and some kind of prediction for the future too also make it short like in points ")
                 _aiResponse.value = response.text
+                _isloading.postValue(false)
                 Log.i("SendMessage", "Response from: ${response.text}")
             } catch (e: Exception) {
                 Log.e("SendMessage", "Error: ${e.message}")

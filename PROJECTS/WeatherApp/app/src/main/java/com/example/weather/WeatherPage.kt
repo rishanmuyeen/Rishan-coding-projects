@@ -1,5 +1,6 @@
 package com.example.weather
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -33,13 +34,17 @@ fun WeatherPage(
 
     val weatherResult = weatherViewModel.weatherResponse.observeAsState() // Observe weather response
     val aiResponse by geminiViewModel.aiResponse.observeAsState("") // Observe AI response
+    val isloading = geminiViewModel.isloading.observeAsState()
 
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp),
+            .padding(16.dp)
+            .fillMaxSize()   // Makes the Surface fill the entire screen
+            .background(Color.hsl(209f, 0.51f, 0.50f, 0.93f)), // Sets the background color to Light Gray,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        item { Text(text = "Check the Weather", fontWeight = FontWeight.Bold, fontSize = 32.sp, modifier = Modifier.padding(top = 35.dp))}
         item {
             // Input field for city and search button
             Row(
@@ -89,7 +94,7 @@ fun WeatherPage(
                     Text(text = "Enter a city name!\nTo load the information",
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Center
-                        )
+                    )
                 }
             }
         }
@@ -101,7 +106,10 @@ fun WeatherPage(
 
         // Display AI response if available
         item {
-            if (aiResponse.isNotEmpty()) {
+            if(isloading.value == true){
+                CircularProgressIndicator()
+            }
+            else if (aiResponse.isNotEmpty()) {
                 Card(
                     modifier = Modifier.padding(16.dp),
                 ) {
@@ -182,7 +190,7 @@ fun WeatherDisplay(data: WeatherModel) {
         Text(
             text = data.current.condition.text,
             fontSize = 20.sp,
-            color = Color.Gray,
+            color = Color.White,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center
         )
