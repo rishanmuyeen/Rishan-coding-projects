@@ -1,16 +1,12 @@
 # musicapp
 
-A new Flutter project.
+This is Spotify clone app created with flutter
+Features-
+  Has authentication page where user can signin or signup.
+  Can switch between dark and light mood.
+  The home page contains the playlist, and button to view the profile of the user. Also can view all the new songs added.
+  The music player can be paused and can be added to the favourites
 
-## Getting Started
+The Firebase is used as a backend for Authentication, Database and storage.
+Songs are manually uploaded to the storage.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
